@@ -3,9 +3,13 @@
     "name": "rentx",
     "slug": "rentx",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "jsEngine": "hermes",
+
+    "assetBundlePatterns": ["**/*"],
+    "splash": {
+      "image": "./assets/splash_rentx.png",
+      "backgroundColor": "#1B1B1F"
+    }
   },
   "name": "rentx"
 }

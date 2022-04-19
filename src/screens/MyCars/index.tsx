@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import { StatusBar, FlatList } from "react-native";
 import { BackButton } from "../../components/BackButton";
-import { Load } from "../../components/Load";
+import { LoadAnimation } from "../../components/LoadAnimation";
 
 import { Car } from "../../components/Car";
 import { CarDTO } from "../../dtos/CarDTO";
@@ -73,7 +73,7 @@ export function MyCars() {
         <Subtitle>Conforto, seguranca e praticidade.</Subtitle>
       </Header>
       {loading ? (
-        <Load />
+        <LoadAnimation />
       ) : (
         <Content>
           <Appointments>
