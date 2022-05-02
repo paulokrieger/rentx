@@ -9,19 +9,28 @@ interface Props extends RectButtonProps {
   title: string;
   color?: string;
   loading?: boolean;
+  light?: boolean;
 }
 
-export function Button({ title, color, loading = false, ...rest }: Props) {
+export function Button({
+  title,
+  color,
+  enabled = true,
+  loading = false,
+  light = false,
+  onPress,
+}: Props) {
   return (
     <Container
-      {...rest}
-      color={color}
-      style={{ opacity: loading === true ? 0.5 : 1 }}
+      onPress={onPress}
+      color={color ? color : theme.colors.main}
+      enabled={enabled}
+      style={{ opacity: enabled === false || loading === true ? 0.5 : 1 }}
     >
       {loading ? (
         <ActivityIndicator color={theme.colors.shape} />
       ) : (
-        <Title>{title}</Title>
+        <Title light={light}>{title}</Title>
       )}
     </Container>
   );

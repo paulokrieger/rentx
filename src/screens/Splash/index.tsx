@@ -58,7 +58,7 @@ export function Splash() {
   });
 
   function startApp() {
-    navigation.navigate("Home" as any);
+    navigation.navigate("SignIn" as any);
   }
 
   useEffect(() => {
